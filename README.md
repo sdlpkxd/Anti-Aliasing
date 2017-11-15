@@ -1,5 +1,5 @@
 # Why the results are bad when I use opencv c++ function resize() to downsacle the image and use the VDSR to upscale the image ?
-  It's usually caused by the difference of opencv c++ function resize() and matlab imrsize(). In matlab, the Anti-aliasing is default set. but there are no Anti-aliasing set by default in opencv c++ function resize(). You use matlab imrsize() to process the trainning data and get the model by trainning. but use opencv c++ function resize() to process the test image(down scale the image), so the results are bad. The same resize function should be used when trainning data and test data are processed.
+  It's usually caused by the difference of opencv c++ function resize() and matlab imrsize(). In matlab, the Anti-aliasing is default enabled. But the Anti-aliasing is unenabled by default in opencv c++ function resize(). You use matlab imrsize() to process the trainning data and get the model by trainning. but use opencv c++ function resize() to process the test image(down scale the image), so the results are bad. The same resize function should be used when trainning data and test data are processed.
 
 # Anti-Aliasing
 introduce the difference of Matlab imresize and the opencv resize
